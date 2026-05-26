@@ -46,7 +46,6 @@ cd webreel-runs-and-roses
 
 | Recurs | Autor | Llicència |
 |--------|-------|-----------|
-| Codi propi | Marija | MIT |
 | GitHub API | GitHub | Termes d'ús de GitHub |
 
 ## Demo
