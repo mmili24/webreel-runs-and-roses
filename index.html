@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Demostració del joc Runs & Roses, un platformer de Sant Jordi fet amb Phaser 3." />
+  <title>Runs & Roses — WebReel</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="index.html">Inici</a>
+      <a href="about.html">Sobre el projecte</a>
+    </nav>
+    <h1>Runs & Roses 🌹</h1>
+    <p>Un platformer de Sant Jordi fet amb Phaser 3 + Vite + Bun</p>
+    <div class="platforms" aria-hidden="true">
+      <div class="platform p1"></div>
+      <span class="rose r1">🌹</span>
+      <div class="platform p2"></div>
+      <span class="rose r2">🌹</span>
+      <div class="platform p3"></div>
+      <span class="rose r3">🌹</span>
+      <div class="platform p4"></div>
+    </div>
+  </header>
+
+  <main>
+
+    <section id="player-section" aria-label="Reproductor de vídeo">
+      <video id="main-video" preload="metadata" poster="assets/img/poster.png">
+        <source src="assets/video/demo.mp4" type="video/mp4" />
+        <p>El teu navegador no suporta vídeo HTML5.</p>
+      </video>
+
+      <div id="controls" role="group" aria-label="Controls del reproductor">
+        <button id="btn-play" aria-label="Play / Pause">▶</button>
+        <input type="range" id="progress" value="0" min="0" step="0.1" aria-label="Progrés del vídeo" />
+        <span id="time-display">0:00 / 0:00</span>
+        <input type="range" id="volume" value="1" min="0" max="1" step="0.05" aria-label="Volum" />
+        <button id="btn-fullscreen" aria-label="Pantalla completa">⛶</button>
+      </div>
+    </section>
+
+    <section id="chapters-section" aria-label="Capítols del vídeo">
+      <h2>Capítols</h2>
+      <ul id="chapters-list"></ul>
+    </section>
+
+    <section id="comments-section" aria-label="Comentaris">
+      <h2>Comentaris</h2>
+      <form id="comment-form" novalidate>
+        <label for="comment-name">Nom</label>
+        <input type="text" id="comment-name" placeholder="El teu nom" autocomplete="off" />
+        <span class="error" id="error-name"></span>
+
+        <label for="comment-text">Comentari</label>
+        <textarea id="comment-text" placeholder="Escriu el teu comentari..."></textarea>
+        <span class="error" id="error-text"></span>
+
+        <button type="submit">Publicar</button>
+      </form>
+      <ul id="comments-list"></ul>
+    </section>
+
+    <section id="api-section" aria-label="Informació del repositori">
+      <h2>El projecte a GitHub</h2>
+      <div id="repo-info">Carregant...</div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p> Marija · Institut MVM · 2026</p>
+  </footer>
+
+  <script type="module" src="js/main.js"></script>
+  <script type="module" src="js/api.js"></script>
+  <script type="module" src="js/storage.js"></script>
+</body>
+</html>
