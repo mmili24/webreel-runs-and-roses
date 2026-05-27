@@ -1,6 +1,6 @@
 [
-  { "title": "Introducció al projecte", "time": 0 },
-  { "title": "Estructura amb Phaser 3 i Vite", "time": 45 },
-  { "title": "Animacions i spritesheet", "time": 110 },
-  { "title": "Física i col·lisions", "time": 185 }
+  { "title": "El joc en acció", "time": 0 },
+  { "title": "Estructura del codi", "time": 45 },
+  { "title": "Arrencant el projecte amb Bun", "time": 155 },
+  { "title": "El joc en local i a Vercel", "time": 172 }
 ]
