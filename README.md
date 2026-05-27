@@ -9,7 +9,7 @@ Runs & Roses és un joc de plataformes 2D de temàtica Sant Jordi fet amb Phaser
 ## Tecnologies
 
 - HTML5 semàntic
-- CSS3 (custom properties, flexbox, responsive)
+- CSS3 (custom properties, flexbox, responsive, animacions)
 - JavaScript vanilla (mòduls, OOP, classes privades)
 - GitHub API (fetch/async-await)
 - localStorage i sessionStorage
@@ -41,20 +41,30 @@ cd webreel-runs-and-roses
   - video/
     - chapters.json
   - img/
+    - poster.png
 
 ## Llicències
 
 | Recurs | Autor | Llicència |
 |--------|-------|-----------|
+| Codi propi | Marija | MIT |
+| Vídeo | Marija | CC BY 4.0 |
 | GitHub API | GitHub | Termes d'ús de GitHub |
 
 ## Demo
 
 🔗 [Demo en viu](https://mmili24.github.io/webreel-runs-and-roses/)
+🎮 [Juga a Runs & Roses](https://sant-jordi-one.vercel.app/)
+
+## Funcionalitats extra
+
+- ✅ Mode fosc/clar amb persistència a localStorage
+- ✅ Publicat a GitHub Pages
 
 ## Accessibilitat i usabilitat
 
 - WCAG 2.1 AA
-- Navegació per teclat completa
+- Navegació per teclat 
 - `aria-label` als controls del reproductor
 - Contrast adequat (fons fosc / text clar)
+- Animació CSS temàtica (plataformes i roses animades)
