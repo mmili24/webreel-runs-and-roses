@@ -77,6 +77,12 @@ class VideoPlayer {
 
     this.#video.addEventListener('play', () => this.#btnPlay.textContent = '⏸');
     this.#video.addEventListener('pause', () => this.#btnPlay.textContent = '▶');
+    this.#video.addEventListener('ended', () => {
+      this.#btnPlay.textContent = '▶';
+      this.#video.currentTime = 0;
+      this.#progress.value = 0;
+      this.#timeDisplay.textContent = `0:00 / ${this.#formatTime(this.#video.duration)}`;
+    });
   }
 
   #togglePlay() {
