@@ -1,4 +1,4 @@
-import { saveComment, getComments } from './storage.js';
+import { saveComment, getComments, saveTheme, getTheme } from './storage.js';
 import { fetchRepoInfo } from './api.js';
 
 
@@ -226,3 +226,18 @@ const chapters = new ChapterManager(player);
 const comments = new CommentManager();
 fetchRepoInfo();
 
+const btnTheme = document.getElementById('btn-theme');
+
+function applyTheme(theme) {
+  document.documentElement.setAttribute('data-theme', theme);
+  btnTheme.textContent = theme === 'dark' ? '🌙' : '☀️';
+}
+
+applyTheme(getTheme());
+
+btnTheme.addEventListener('click', () => {
+  const current = getTheme();
+  const next = current === 'dark' ? 'light' : 'dark';
+  saveTheme(next);
+  applyTheme(next);
+});
